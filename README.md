@@ -37,7 +37,7 @@ A Laravel 12 backend application supporting user authentication and multi-compan
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/multi-tenant-backend-app.git
+   git clone https://github.com/vijay-dev07/multi-tenant-backend.git
    cd multi-tenant-backend-app
 
 
