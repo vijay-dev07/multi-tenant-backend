@@ -21,7 +21,8 @@ A Laravel 12 backend application supporting user authentication and multi-compan
    cd multi-tenant-backend-app
 
 
-- Install Dependencies
+2. **Install Dependencies**
+```bash
 composer install
 npm install && npm run dev
 
@@ -40,5 +41,3 @@ php artisan migrate
 - Serve the Application
 php artisan serve
 
-- test 
-- ß
