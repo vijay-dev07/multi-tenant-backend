@@ -1,6 +1,6 @@
 
 <x-app-layout>
-<div class="max-w-xl mx-auto p-4">
+<div class="max-w-4xl mx-auto p-4 mt-20">
     <h1 class="text-xl font-bold mb-4 dark:text-gray-100">{{ isset($company) ? 'Edit' : 'Add' }} Company</h1>
     <form method="POST" action="{{ isset($company) ? route('companies.update', $company) : route('companies.store') }}">
         @csrf

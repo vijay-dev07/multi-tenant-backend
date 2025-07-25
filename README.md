@@ -8,8 +8,28 @@ A Laravel 12 backend application supporting user authentication and multi-compan
 - CRUD operations for companies (name, address, industry)
 - User-specific company access and ownership
 - Active company switching (scoped session)
-- Pagination and search for company listings
+- Pagination 
 - Blade views with Tailwind CSS
+
+## Multi-Tenant Logic
+
+- Each user can create and manage multiple companies.
+
+- Only companies created by the authenticated user are visible and editable by them.
+
+- A user can switch their active company from the dashboard using a dropdown.
+
+- All future data operations (e.g., invoices, projects) will be scoped to the current active company.
+
+- The active company is tracked using a user_active_companies pivot table.
+
+## Tech Stack
+
+- Laravel 12
+- Laravel Breeze (Blade)
+- MySQL
+- Tailwind CSS
+- Vite
 
 ---
 
