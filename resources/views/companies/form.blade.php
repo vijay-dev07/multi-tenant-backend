@@ -1,6 +1,6 @@
 
 <x-app-layout>
-<div class="max-w-4xl mx-auto p-4 mt-20">
+<div class="max-w-4xl mx-auto p-4 mt-8">
     <h1 class="text-xl font-bold mb-4 dark:text-gray-100">{{ isset($company) ? 'Edit' : 'Add' }} Company</h1>
     <form method="POST" action="{{ isset($company) ? route('companies.update', $company) : route('companies.store') }}">
         @csrf
@@ -10,19 +10,22 @@
 
         <div class="mb-4">
             <label for="name" class="block text-sm font-medium dark:text-gray-100" >Name</label>
-            <input type="text" name="name" id="name" class="w-full border rounded px-3 py-2" value="{{ old('name', $company->name ?? '') }}" required>
+            <input type="text" name="name" id="name" class="w-full border rounded px-3 py-2" value="{{ old('name', $company->name ?? '') }}" 
+            >
             @error('name') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
         </div>
 
         <div class="mb-4">
             <label for="industry" class="block text-sm font-medium dark:text-gray-100">Industry</label>
-            <input type="text" name="industry" id="industry" class="w-full border rounded px-3 py-2" value="{{ old('industry', $company->industry ?? '') }}" required>
+            <input type="text" name="industry" id="industry" class="w-full border rounded px-3 py-2" value="{{ old('industry', $company->industry ?? '') }}" 
+            >
             @error('industry') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
         </div>
 
         <div class="mb-4">
             <label for="address" class="block text-sm font-medium dark:text-gray-100">Address</label>
-            <textarea name="address" id="address" class="w-full border rounded px-3 py-2" required>{{ old('address', $company->address ?? '') }}</textarea>
+            <textarea name="address" id="address" class="w-full border rounded px-3 py-2" 
+            >{{ old('address', $company->address ?? '') }}</textarea>
             @error('address') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
         </div>
 
