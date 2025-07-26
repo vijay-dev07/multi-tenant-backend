@@ -44,7 +44,8 @@ A Laravel 12 backend application supporting user authentication and multi-compan
 2. **Install Dependencies**
 ```bash
 composer install
-npm install && npm run dev
+- need version 18 + for node
+npm install && npm run dev  
 
 
 cp .env.example .env
